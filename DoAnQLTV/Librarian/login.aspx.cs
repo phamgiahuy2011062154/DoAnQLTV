@@ -12,7 +12,7 @@ namespace DoAnQLTV.Librarian
     public partial class login : System.Web.UI.Page { 
 
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\DoAnCoSO\DoAnQLTV\DoAnQLTV\App_Data\QLTV_database.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QLTV_database.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             if(con.State == System.Data.ConnectionState.Open)
@@ -20,6 +20,7 @@ namespace DoAnQLTV.Librarian
                 con.Close();
             }
             con.Open();
+            
 
         }
 
@@ -41,6 +42,7 @@ namespace DoAnQLTV.Librarian
             i = Convert.ToInt32(dt.Rows.Count.ToString());
             if (i > 0)
             {
+                Session["Librarian"] = username.Text;
                 Response.Redirect("demo.aspx");
             }
             else

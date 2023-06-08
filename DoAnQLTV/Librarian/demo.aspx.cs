@@ -11,7 +11,10 @@ namespace DoAnQLTV.Librarian
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Librarian"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

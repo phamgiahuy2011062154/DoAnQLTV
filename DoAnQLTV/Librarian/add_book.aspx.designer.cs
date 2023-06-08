@@ -60,6 +60,15 @@ namespace DoAnQLTV.Librarian
         protected global::System.Web.UI.WebControls.TextBox quantity;
 
         /// <summary>
+        /// isbn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox isbn;
+
+        /// <summary>
         /// buttonAddBook control.
         /// </summary>
         /// <remarks>

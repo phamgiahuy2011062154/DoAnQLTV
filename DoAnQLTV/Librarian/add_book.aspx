@@ -26,6 +26,10 @@
                                           <label for="" class="control-label mb-1">Số lượng:</label>
                                           <asp:TextBox ID="quantity" runat="server" class="form-control"></asp:TextBox>
                                       </div>
+                                      <div class="form-group">
+                                          <label for="" class="control-label mb-1">ISBN:</label>
+                                          <asp:TextBox ID="isbn" runat="server" class="form-control"></asp:TextBox>
+                                      </div>
                                           <asp:Button ID="buttonAddBook" runat="server" class="btn btn-lg btn-info btn-block" text="Add Book" OnClick="buttonAddBook_Click" />
                                       </div>
                                       <div class="alert alert-success" id="addSuccess" runat="server" style="margin-top:10px; display:none">
